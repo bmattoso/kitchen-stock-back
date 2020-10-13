@@ -12,9 +12,11 @@ import io.ktor.server.netty.*
 import org.slf4j.event.Level
 
 fun main(args: Array<String>) {
+    val port = System.getenv("PORT")?.toInt() ?: 8080
+
     embeddedServer(
         factory = Netty,
-        port = 8080,
+        port = port,
         module = Application::module
     ).apply { start(wait = true) }
 }
@@ -41,20 +43,7 @@ fun Application.module() {
 
     routing {
         get("/") {
-            call.respond(Response(status = "OK"))
-        }
-
-        post("/") {
-            val request = call.receive<Request>()
-            call.respond(HttpStatusCode.OK, request)
+            call.respond(mapOf("Status" to "OK"))
         }
     }
 }
-
-data class Response(val status: String)
-
-data class Request(
-    val id: String,
-    val quantity: Int,
-    val isTrue: Boolean
-)
