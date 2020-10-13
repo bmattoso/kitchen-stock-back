@@ -11,7 +11,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import org.slf4j.event.Level
 
-fun main(args: Array<String>) {
+fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 8080
 
     embeddedServer(
