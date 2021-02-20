@@ -1,1 +1,0 @@
-web: build/install/kitchen-stock/bin/kitchen-stock
