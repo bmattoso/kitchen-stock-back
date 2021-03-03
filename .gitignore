@@ -1,38 +1,34 @@
-build
-.gradle
-.gradletasknamecache
-.idea/*
-.idea/runConfigurations
-.idea/runConfigurations/*
-.idea/vcs.xml
-.idea/dictionaries
-.idea/dictionaries/*
-.idea/copyright
-.idea/copyright/*
-.idea/codeStyles
-.idea/codeStyles/*
-.idea/icon.png
-out
-*.iml
-.vscode
+# compiled output
+/dist
+/node_modules
 
-*.versionsBackup
-*.releaseBackup
-release.properties
-local.properties
-*.swp
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
-.video
-.attach_pid*
-apidoc
-
-
-bin/
-.settings
-.project
-.classpath
-.konan
-
+# OS
 .DS_Store
 
-hs_err_pid*.log
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
